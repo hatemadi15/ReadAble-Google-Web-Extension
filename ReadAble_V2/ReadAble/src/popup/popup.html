@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadAble Extension</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ReadAble</h1>
+        <div class="controls">
+            <section class="font-controls">
+                <h2>Font Settings</h2>
+                <select id="fontFamily">
+                    <option value="OpenDyslexic">OpenDyslexic</option>
+                    <option value="Comic Sans MS">Comic Sans</option>
+                    <option value="Arial">Arial</option>
+                </select>
+                <div class="slider-control">
+                    <label>Letter Spacing</label>
+                    <input type="range" id="letterSpacing" min="0" max="5" step="0.5" value="0">
+                </div>
+                <div class="slider-control">
+                    <label>Line Height</label>
+                    <input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1.5">
+                </div>
+            </section>
+
+            <section class="preset-controls">
+                <h2>Presets</h2>
+                <button id="dyslexiaMode">Dyslexia Mode</button>
+                <button id="nightReader">Night Reader</button>
+            </section>
+
+            <section class="tts-controls">
+                <h2>Text-to-Speech</h2>
+                <button id="playPause">Play/Pause</button>
+                <select id="speechRate">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.8" selected>0.8x</option>
+                    <option value="1.0">1.0x</option>
+                </select>
+            </section>
+        </div>
+        <div class="button-container">
+            <button id="showScorecard" class="control-button">View Accessibility Score</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
